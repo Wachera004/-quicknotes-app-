@@ -1,0 +1,173 @@
+/* Box sizing reset & global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  background-color: #008080;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #008080;
+}
+
+/* Form layout using Flexbox */
+#note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="text"], select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus, select:focus {
+  outline: none;
+  border-color: #008080;
+}
+
+button {
+  background-color: #008080;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #006666;
+}
+
+/* Error message styling */
+#error-message {
+  color: #d9534f;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* Search input margin */
+#search-input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Note count styling */
+#note-count {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Notes list & cards */
+#notes-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.note-card {
+  background: #fafafa;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 6px solid #ccc;
+}
+
+/* Category left-border styling */
+.category-personal {
+  border-left-color: #008080; /* Teal */
+}
+
+.category-work {
+  border-left-color: #8b0000; /* Dark Red */
+}
+
+.category-study {
+  border-left-color: #0000ff; /* Blue */
+}
+
+.note-content p {
+  margin-bottom: 5px;
+}
+
+.note-meta {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.delete-btn {
+  background-color: #d9534f;
+  padding: 5px 10px;
+  font-size: 0.85rem;
+}
+
+.delete-btn:hover {
+  background-color: #c9302c;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Media query for screens 600px or narrower */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  
+  .note-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .delete-btn {
+    align-self: flex-end;
+  }
+}
